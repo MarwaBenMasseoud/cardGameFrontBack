@@ -1,0 +1,21 @@
+
+<div class="container">
+  <div class="container-main">
+    <button id="afficher-main" class="btn-main" (click)="afficherMain()">Afficher la main non triée</button>
+    <div id="cartes" class="content-main">
+      <div class="carte" *ngFor="let carte of cartes">
+        <img src="assets/img/{{carte.valeur}}{{carte.couleur}}.jpeg" style="width: 150px;">
+      </div>
+    </div>
+  </div>
+  <div class="container-main-triee" *ngIf="cartes">
+    <button id="triee-main" class="btn-main-triee" (click)="trieeMain()">Afficher la main triée</button>
+    <div id="cartesTriee" class="content-main-triee">
+      <div class="carte-triee" *ngFor="let carte of cartesTriee">
+        <img src="assets/img/{{carte.valeur}}{{carte.couleur}}.jpeg" style="width: 150px;">
+      </div>
+    </div>
+  </div>
+</div>
+
+
